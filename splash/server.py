@@ -122,6 +122,7 @@ def parse_opts(jupyter=False, argv=None):
     return opts, args
 
 
+# TODO 
 def start_logging(opts):
     import twisted
     from twisted.python import log
@@ -129,7 +130,7 @@ def start_logging(opts):
         from twisted.python.logfile import DailyLogFile
         logfile = DailyLogFile.fromFullPath(opts.logfile)
     else:
-        logfile = sys.stderr
+        logfile = sys.stdout
     flo = log.startLogging(logfile)
 
     if twisted.version.major >= 13:  # add microseconds to log

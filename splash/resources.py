@@ -458,6 +458,7 @@ class ClearCachesResource(Resource):
         }, sort_keys=True).encode('utf-8')
 
 
+# TODO 
 class PingResource(Resource):
     isLeaf = True
 
@@ -667,7 +668,7 @@ class Root(Resource):
 
         self.putChild(b"_debug", DebugResource(pool, self.argument_cache))
         self.putChild(b"_gc", ClearCachesResource(self.argument_cache))
-        self.putChild(b"_ping", PingResource())
+        self.putChild(b"whoami", PingResource())
 
         # backwards compatibility
         self.putChild(b"debug", DebugResource(pool, self.argument_cache,

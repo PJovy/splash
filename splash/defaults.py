@@ -64,7 +64,8 @@ SHOW_HISTORY = 0
 SHOW_HAR = 0
 
 # servers
-SPLASH_PORT = 8050
+# TODO 
+SPLASH_PORT = 10000
 SPLASH_IP = '0.0.0.0'
 
 # pool options
