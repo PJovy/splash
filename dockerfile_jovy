@@ -1,3 +1,4 @@
-FROM scrapinghub/splash:latest
+FROM scrapinghub/splash:3.5.0
 WORKDIR /app
-COPY . .
+EXPOSE 10000
+COPY ./* ./
